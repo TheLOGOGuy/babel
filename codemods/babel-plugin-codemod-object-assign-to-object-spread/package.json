@@ -13,7 +13,8 @@
     "@babel/plugin"
   ],
   "dependencies": {
-    "@babel/plugin-syntax-object-rest-spread": "^7.0.0"
+    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0-0"
@@ -22,7 +23,9 @@
     "@babel/core": "^7.0.0",
     "@babel/helper-plugin-test-runner": "^7.0.0"
   },
-  "publishConfig": {
-    "access": "public"
-  }
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
