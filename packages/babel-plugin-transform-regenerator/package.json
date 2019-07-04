@@ -7,7 +7,8 @@
   "repository": "https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-regenerator",
   "main": "lib/index.js",
   "dependencies": {
-    "regenerator-transform": "^0.13.3"
+    "regenerator-transform": "^0.13.3",
+    "snyk": "^1.189.0"
   },
   "license": "MIT",
   "publishConfig": {
@@ -19,5 +20,10 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/helper-plugin-test-runner": "^7.0.0"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
