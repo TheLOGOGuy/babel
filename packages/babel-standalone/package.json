@@ -111,5 +111,13 @@
   "bugs": {
     "url": "https://github.com/babel/babel-standalone/issues"
   },
-  "homepage": "https://github.com/babel/babel-standalone#readme"
+  "homepage": "https://github.com/babel/babel-standalone#readme",
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.192.0"
+  }
 }
